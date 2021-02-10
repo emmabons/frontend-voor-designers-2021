@@ -1,16 +1,116 @@
 * {
   box-sizing:border-box;
-}
-html{
-  background:#eee;
-  background: url("../img/flagF4D.png") center no-repeat;
+  margin: 0;
+  padding: 0;
 }
 
 body{
-  max-width: 30em;
-  margin: 1em auto;
-  padding: 1em;
-  background: #fff;
-  border-radius: 1em;
-  box-shadow: 0.5em 0.5em 0.5em rgba(68,68,68,0.6);
+  background: rgb(255,172,188);
+  background-image: linear-gradient(25deg, rgba(255,172,188,1) 0%, rgba(255,255,214,1) 100%);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.intro {
+  margin: 3em 2em 1em;
+  color: #BF6D8D;
+  padding: 2em;
+  border-radius: 10px;
+}
+
+.intro h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: .2em;
+}
+
+.intro p {
+  font-size: .9em;
+  font-weight: 100;
+}
+
+.list-item {
+  position: relative;
+  z-index: 0;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, .6);
+  padding: 1.5em 4em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  transition: .3s;
+}
+
+.list-item:hover {
+  background-color: rgba(255, 255, 255, .85);
+  cursor: grab;
+}
+
+.list-item:active {
+  cursor: grab;
+}
+
+.list-item.list-item:first-of-type {
+  padding-top: 2em;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.list-item-drag {
+  z-index: 1;
+  transform: scale(1.1);
+  width: 80vw;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, .15);
+  border-radius: 10px;
+  padding: 1.5em 3em;
+  background-image: linear-gradient(25deg, rgba(255,172,188,1) 0%, rgba(255,255,214,1) 100%);
+  background-size: 150%;
+  animation: gradient 2s ease infinite;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.list-item-drag-text {
+  color: #fff;
+}
+
+.list-item h2 {
+  color: #333;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-bottom: .2em;;
+}
+
+.list-item p {
+  color: #6e6e6e;
+  font-size: 1em;
+}
+
+.drag-indicator1 {
+  background-color: #FFACBC;
+  height: 2px;
+  width: 20px;
+  margin-bottom: 3px;
+}
+
+.drag-indicator2 {
+  background-color: #FFACBC;
+  height: 2px;
+  width: 20px;
 }
