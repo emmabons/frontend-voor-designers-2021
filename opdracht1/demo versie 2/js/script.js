@@ -11,24 +11,10 @@ new Sortable(dragArea, {
   animation: 350
 });
 
-var listItem = document.querySelector(".list-item");
+var listItem = document.querySelectorAll(".list-item");
 var listItemDrag = document.querySelector(".list-item-drag");
-var listItemH2 = document.querySelector(".list-item h2");
-var listItemP = document.querySelector(".list-item p");
+var listItemH2 = document.querySelectorAll(".list-item h2");
+var listItemP = document.querySelectorAll(".list-item p");
 
-function dragStyle() {
-  listItem.setAttribute("class", "list-item-drag");
-  listItemH2.setAttribute("class", "list-item-drag-text");
-  listItemP.setAttribute("class", "list-item-drag-text");
-}
-
-function unDrag() {
-  listItem.removeAttribute("class", "list-item-drag");
-  listItem.setAttribute("class", "list-item");
-}
-
-listItem.addEventListener("drag", dragStyle);
-
-listItem.addEventListener("drop", unDrag);
 
 // aan alle list elementen eventhandlers geven met een loop. querySelectorAll met array van elementen. Met een for each daar doorheen loopen en aan al die elementen een eventhandler toevoegen. Stap 2 naar functionaliteit verwijzen per list item zodat hij iets gaat doen.
