@@ -32,4 +32,4 @@ Beetje hetzelfde als hierboven, met het hoveren. Daarnaast heeft de lijst met it
 
 
 ## code
-De js zorgt voor een kleine animatie, die mbv een open source code bestand is opgezet. De vars maken dat de styling van een element uit de lijst verandert.
+De js zorgt voor een kleine animatie, die mbv een open source code bestand is opgezet.
